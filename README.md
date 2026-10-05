@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Re-Former
 
-Things you may want to cover:
+A small Rails app that builds a user sign-up and edit form two ways:
+hand-written HTML and Rails' `form_with` helper.
 
-* Ruby version
+## What it demonstrates
+- Building a form with raw HTML, including CSRF tokens
+- Strong parameters (`require` / `permit`)
+- Model validations and displaying error messages
+- Create and edit flows (POST vs PATCH)
 
-* System dependencies
+## Tech
+Ruby, Rails 7, SQLite, Turbo
 
-* Configuration
+## Run it locally
+bundle install
+rails db:migrate
+rails server
+Then visit http://localhost:3000/users/new
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## What I learned
+Short notes on what clicked, such as how Rails fakes PATCH with a hidden `_method` field.
